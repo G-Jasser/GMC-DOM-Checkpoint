@@ -4,7 +4,7 @@ function calculateTotal(){
     var quantities = document.getElementsByClassName('Quant')
     totalCal = 0
     for(var i = 0; i<prices.length; i++){    
-      totalCal+= parseFloat(parseFloat(prices[i].textContent) * parseInt(quantities[i].value))  
+      totalCal+= parseFloat(prices[i].textContent) * parseInt(quantities[i].value)  
     }
     total.value = totalCal
 }
@@ -46,3 +46,6 @@ var likies = document.getElementsByClassName('like')
 
     })
   }
+
+/* QuerySelector better for direct selection of a variable
+because getElement always returns an array */
